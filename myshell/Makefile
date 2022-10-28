@@ -11,13 +11,15 @@ BUILTINS	=	src/builtins
 ENV		=	src/env
 INIT	=	src/init
 SET_UNSET	= src/set_unset
-
-HEADERS	=	includes/minishell.h includes/libft.h	includes/hed.h
+SPLITER		= src/spliter
+HEADERS	=	includes/minishell.h includes/libft.h	includes/env.h	includes/spliter.h
 
 LIBFTPATH	=	libft
 
-SRC		=	main.c		env_find_val.c	init_plite.c\
-			init_shlvl.c	export_env.c	unset_env.c
+SRC		=	main.c			env_find_val.c	init_plite.c\
+			init_shlvl.c	export_env.c	unset_env.c\
+			what_env.c		spliter.c		check_letter.c\
+			check_separator.c
 
 OBJ		=	$(SRC:%.c=$(OBJDIR)/%.o)
 
@@ -46,6 +48,9 @@ $(OBJDIR)/%.o	:	$(INIT)/%.c $(HEADERS)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(OBJDIR)/%.o	:	$(SET_UNSET)/%.c $(HEADERS)
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+
+$(OBJDIR)/%.o	:	$(SPLITER)/%.c $(HEADERS)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 clean	:
 	make -C ${LIBFTPATH} clean

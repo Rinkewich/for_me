@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_plite.c                                       :+:      :+:    :+:   */
+/*   check_letter.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 17:35:25 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/28 18:29:47 by fardath          ###   ########.fr       */
+/*   Created: 2022/10/28 19:01:50 by fardath           #+#    #+#             */
+/*   Updated: 2022/10/28 19:03:37 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "env.h"
 #include "minishell.h"
-#include "libft.h"
-//выделение памяти для структуры
-t_plit	*init_plit(int argc, char **argv, char **env)
-{
-	t_plit	*split;
+#include "spliter.h"
 
-	split = malloc(sizeof(t_plit));
-	split->pid = getpid();
-	split->argv = argv;
-	split->argc = argc;
-	split->temporary = 0;
-	split->env = init_env_lvl(env);
-	return (split);
+char check_letter(t_split_data *data)
+{
+	return (data->line[data->index]);
 }

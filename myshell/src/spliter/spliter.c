@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_plite.c                                       :+:      :+:    :+:   */
+/*   spliter.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 17:35:25 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/28 18:29:47 by fardath          ###   ########.fr       */
+/*   Created: 2022/10/28 18:38:43 by fardath           #+#    #+#             */
+/*   Updated: 2022/10/28 19:23:01 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "env.h"
 #include "minishell.h"
-#include "libft.h"
-//выделение памяти для структуры
-t_plit	*init_plit(int argc, char **argv, char **env)
-{
-	t_plit	*split;
+#include "spliter.h"
 
-	split = malloc(sizeof(t_plit));
-	split->pid = getpid();
-	split->argv = argv;
-	split->argc = argc;
-	split->temporary = 0;
-	split->env = init_env_lvl(env);
-	return (split);
+t_split_data	*init_split_data(char *line)
+{
+	t_split_data	*data;
+	
+	data = malloc(sizeof(t_split_data));
+	data->index = 0;
+	data->line = line;
+	data->words = ft_arrnew(0);
+	return (data);
+}
+
+void spliter(t_plit *split)
+{
+	t_split_data	*data;
+
+	data = init_split_data(split->line);
+	while (check_letter(data))
+	{
+		if (check_separator(data))
+			;
+	}
+	free(data);
 }

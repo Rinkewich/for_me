@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hed.h                                              :+:      :+:    :+:   */
+/*   env.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:36:26 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/25 20:20:59 by fardath          ###   ########.fr       */
+/*   Updated: 2022/10/28 18:31:54 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HED_H
-# define HED_H
+#ifndef ENV_H
+# define ENV_H
+
+# define MINISHELL "\033[7m\033[35mminishell$:\033[0m "
+# define SEPARATORS " 	<>|$\"\'"
 //change struct
 typedef struct s_token
 {
@@ -44,4 +47,5 @@ char	**add_var(char **env, char *arg);
 char	**unset_var(char *var, char **env);
 void	free_env(char **env);
 char	**delete_var(char **env, int pos);
+void	what_env(t_plit *split, int sq, int dq, int i);
 #endif

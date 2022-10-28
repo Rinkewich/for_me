@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 15:57:47 by rdeanne           #+#    #+#             */
-/*   Updated: 2022/10/25 19:26:15 by fardath          ###   ########.fr       */
+/*   Updated: 2022/10/28 19:26:38 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,14 @@
 # include <errno.h>
 
 # include "libft.h"
-# include "hed.h"
+# include "env.h"
+#include "spliter.h"
 
 # define PROMT "minishell: \x1B[s"
 # define MAX_PATH 1024
 
 // Tokens types
-# define EMPTY 0
-# define CMD 1
-# define ARG 2
-# define REDIR_INPUT 3	// <
-# define REDIR_OUTPUT 4	// >
-# define REDIR_APPEND 5	// >>
-# define HEREDOC 6		// <<
-# define PIPE 9			// |
 
-# define STDIN 0
-# define STDOUT 1
-# define STDERR 2
 
 typedef struct s_list
 {

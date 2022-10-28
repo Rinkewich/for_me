@@ -6,14 +6,14 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 19:17:53 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/25 19:29:42 by fardath          ###   ########.fr       */
+/*   Updated: 2022/10/28 18:29:52 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "libft.h"
 #include "minishell.h"
-#include "hed.h"
+#include "env.h"
 char	**delete_var(char **env, int pos)
 {
 	int		i;

@@ -6,11 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:00:34 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/25 20:42:53 by fardath          ###   ########.fr       */
+/*   Updated: 2022/10/28 18:30:31 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hed.h"
+#include "env.h"
 #include "minishell.h"
 #include "libft.h"
 //создание своего env установка shlvl
