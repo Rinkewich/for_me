@@ -19,7 +19,7 @@ LIBFTPATH	=	libft
 SRC		=	main.c			env_find_val.c	init_plite.c\
 			init_shlvl.c	export_env.c	unset_env.c\
 			what_env.c		spliter.c		check_letter.c\
-			check_separator.c
+			check_separator.c	check_quote.c	check_word.c
 
 OBJ		=	$(SRC:%.c=$(OBJDIR)/%.o)
 
