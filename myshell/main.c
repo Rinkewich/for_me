@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:26:58 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/30 17:23:18 by fardath          ###   ########.fr       */
+/*   Updated: 2022/10/31 17:27:07 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int	main(int argc, char **argv, char **envp)
 
 	g_sigint = 0;
 	split = init_plit(argc, argv, envp);
-	// program's master
 	master(split);
 	return (0);
 }

@@ -12,14 +12,18 @@ ENV		=	src/env
 INIT	=	src/init
 SET_UNSET	= src/set_unset
 SPLITER		= src/spliter
-HEADERS	=	includes/minishell.h includes/libft.h	includes/env.h	includes/spliter.h
+PARSER		src/parser
+
+HEADERS	=	includes/minishell.h includes/libft.h	includes/env.h	includes/spliter.h	includes/parser.h
 
 LIBFTPATH	=	libft
 
 SRC		=	main.c			env_find_val.c	init_plite.c\
 			init_shlvl.c	export_env.c	unset_env.c\
 			what_env.c		spliter.c		check_letter.c\
-			check_separator.c	check_quote.c	check_word.c
+			check_separator.c	check_quote.c	check_word.c\
+			parser.c		init_parser.c		parser_utils.c\
+			find_redirect.c	put_redirect.c
 
 OBJ		=	$(SRC:%.c=$(OBJDIR)/%.o)
 
@@ -51,6 +55,9 @@ $(OBJDIR)/%.o	:	$(SET_UNSET)/%.c $(HEADERS)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(OBJDIR)/%.o	:	$(SPLITER)/%.c $(HEADERS)
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+
+$(OBJDIR)/%.o	:	$(PARSER)/%.c $(HEADERS)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 clean	:
 	make -C ${LIBFTPATH} clean

@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 15:57:47 by rdeanne           #+#    #+#             */
-/*   Updated: 2022/10/28 19:26:38 by fardath          ###   ########.fr       */
+/*   Updated: 2022/10/31 17:28:20 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@
 
 # include "libft.h"
 # include "env.h"
-#include "spliter.h"
+# include "spliter.h"
+# include "parser.h"
 
 # define PROMT "minishell: \x1B[s"
 # define MAX_PATH 1024
