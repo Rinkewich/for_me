@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   put_pipe.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 17:26:01 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/01 17:47:31 by fardath          ###   ########.fr       */
+/*   Created: 2022/11/01 16:32:50 by fardath           #+#    #+#             */
+/*   Updated: 2022/11/01 16:39:43 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void parser(t_plit *split)
+void put_pipe(t_parser *data)
 {
-	t_parser	*data;
+	t_token *pipe;
 
-	data = init_parser(split->split_line);
-	while (check_word(data))
-	{
-		if (find_redirect(data))
-			put_redirect(split, data);
-		else if (find_pipe(data))
-			put_pipe(data);
-		else if (command_set(data))
-			add_to_argv(data);
-		else
-			put_command(data);
-	}
-	split->tokens = data->head;
-	free(data);
+	pipe = new_token(check_word(data), Pipe);
+	token_push_back(data->head, pipe);
+	data->current_command = NULL;
+	data->command_is_set = 0;
+	data->index++;
 }

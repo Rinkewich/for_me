@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   put_command.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 17:26:01 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/01 17:47:31 by fardath          ###   ########.fr       */
+/*   Created: 2022/11/01 17:32:47 by fardath           #+#    #+#             */
+/*   Updated: 2022/11/01 17:38:43 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void parser(t_plit *split)
+void	put_command(t_parser *data)
 {
-	t_parser	*data;
+	char	*name;
+	t_token	*command_token;
 
-	data = init_parser(split->split_line);
-	while (check_word(data))
-	{
-		if (find_redirect(data))
-			put_redirect(split, data);
-		else if (find_pipe(data))
-			put_pipe(data);
-		else if (command_set(data))
-			add_to_argv(data);
-		else
-			put_command(data);
-	}
-	split->tokens = data->head;
-	free(data);
+	name = ft_strdup(check_word(data));
+	if (ft_strchr("\'\"", name[0])
+		&& ft_strchr("\'\"", name[ft_strlen(name)-1])
+		&& name[0] == name[ft_strlen(name)-1])
+		name = remove_quotes(name);
+	command_token = new_token(name, Command);
+	token_push_back(data->head, command_token);
+	data->current_command = command_token;
+	data->command_is_set = 1;
+	data->index++;
 }

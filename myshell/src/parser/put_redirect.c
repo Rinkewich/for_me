@@ -6,11 +6,12 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:55:52 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/31 20:53:36 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/01 16:06:32 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
 char *proc_herdoc(char *stopword)
 {
 	char	*tmp;
@@ -93,5 +94,20 @@ void put_redirect(t_plit *split, t_parser *data)
 	if (find_heredoc(redirtype))
 	{
 		filename = put_heredoc(split, data);
+		reder_token = new_token(redirtype, Heredoc);
 	}
+	else if (find_redirin(redirtype))
+		reder_token = new_token(redirtype, Redirin);
+	else if (find_redirout(redirtype))
+		reder_token = new_token(redirtype, Redirout);
+	else
+		reder_token = new_token(redirtype, Redirout_a);
+	if (find_heredoc(redirtype) == 0)
+	{
+		data->index++;
+		filename = check_word(data);
+	}
+	reder_token->argv = ft_arr_addback(reder_token->argv, filename);
+	token_push_back(data->head, reder_token);
+	data->index++;
 }

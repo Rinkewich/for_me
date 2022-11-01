@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:36:26 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/28 18:31:54 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/01 17:38:02 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,28 @@
 
 # define MINISHELL "\033[7m\033[35mminishell$:\033[0m "
 # define SEPARATORS " 	<>|$\"\'"
+
+typedef enum e_type
+{
+	Heredoc,
+	Redirin,
+	Redirout,
+	Redirout_a,
+	Pipe,
+	Command
+}	t_type;
 //change struct
 typedef struct s_token
 {
 	char			*val;
-	int				type;
+	t_type			type;
   char            **argv;
-	struct s_token	*prev;
 	struct s_token	*next;
 }	t_token;
 //new struct
+
+
+
 typedef struct s_plit
 {
   int argc;

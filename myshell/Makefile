@@ -12,7 +12,7 @@ ENV		=	src/env
 INIT	=	src/init
 SET_UNSET	= src/set_unset
 SPLITER		= src/spliter
-PARSER		src/parser
+PARSER		= src/parser
 
 HEADERS	=	includes/minishell.h includes/libft.h	includes/env.h	includes/spliter.h	includes/parser.h
 
@@ -23,7 +23,8 @@ SRC		=	main.c			env_find_val.c	init_plite.c\
 			what_env.c		spliter.c		check_letter.c\
 			check_separator.c	check_quote.c	check_word.c\
 			parser.c		init_parser.c		parser_utils.c\
-			find_redirect.c	put_redirect.c
+			find_redirect.c	put_redirect.c		token.c\
+			find_pipe.c		put_pipe.c			put_command.c
 
 OBJ		=	$(SRC:%.c=$(OBJDIR)/%.o)
 
