@@ -6,12 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:38:43 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 19:39:37 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 20:51:44 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-#include "spliter.h"
 
 t_split_data	*init_split_data(char *line)
 {

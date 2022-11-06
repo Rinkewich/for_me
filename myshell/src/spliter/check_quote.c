@@ -6,12 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 17:03:14 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 19:40:46 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 20:51:55 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-#include "spliter.h"
 
 int	check_quote(t_split_data *data)
 {

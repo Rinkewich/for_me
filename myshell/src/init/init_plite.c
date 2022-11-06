@@ -6,13 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:35:25 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 19:45:22 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 20:52:28 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "env.h"
 #include "minishell.h"
-#include "libft.h"
 
 t_plit	*init_plit(int argc, char **argv, char **env)
 {

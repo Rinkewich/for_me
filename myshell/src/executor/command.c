@@ -6,12 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 12:32:02 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 18:43:44 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 20:54:33 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executor.h"
-#include "libft.h"
 
 int	*arrint_new(int len)
 {

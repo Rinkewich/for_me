@@ -6,13 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 16:03:45 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 18:11:49 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 21:00:42 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-#include "executor.h"
-#include "libft.h"
 
 void	wrongarg_error(char *arg)
 {

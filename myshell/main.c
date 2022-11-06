@@ -6,13 +6,13 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:26:58 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 20:28:31 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 21:05:30 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-#include "env.h"
-int	g_sigint;
+
+int g_sigint;
 
 void	sighandler_quit(int signo)
 {

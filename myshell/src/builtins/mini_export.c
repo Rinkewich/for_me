@@ -6,13 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 16:03:55 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 19:47:23 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 21:00:42 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-#include "executor.h"
-#include "libft.h"
 
 char	**add_var(char **env, char *arg)
 {

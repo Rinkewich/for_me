@@ -6,13 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 02:55:32 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 18:11:49 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 20:54:20 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-#include "executor.h"
-#include "libft.h"
 #include <sys/stat.h>
 
 void	execute_bin(t_plit *mini, t_command *cmd, char *path)

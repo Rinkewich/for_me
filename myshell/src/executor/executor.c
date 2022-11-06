@@ -6,13 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:22:01 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 19:24:54 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 20:52:53 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-#include "executor.h"
-#include "libft.h"
 
 int	tokens_has_pipe(t_token *token)
 {

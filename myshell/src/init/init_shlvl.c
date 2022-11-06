@@ -6,13 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:00:34 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 19:44:30 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 21:06:09 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "env.h"
 #include "minishell.h"
-#include "libft.h"
 
 char	**init_env_lvl(char **env)
 {

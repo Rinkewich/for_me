@@ -6,31 +6,22 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 15:57:47 by rdeanne           #+#    #+#             */
-/*   Updated: 2022/11/06 20:28:39 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 21:05:38 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
+# include <unistd.h>
 # include <stdio.h>
 # include <readline/readline.h>
 # include <readline/history.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
 # include <sys/wait.h>
-# include <sys/time.h>
-# include <sys/resource.h>
-# include <sys/types.h>
-# include <signal.h>
-# include <sys/stat.h>
-# include <dirent.h>
 # include <string.h>
-# include <sys/ioctl.h>
-# include <termios.h>
-# include <curses.h>
-# include <term.h>
+# include <signal.h>
+# include <stdlib.h>
+# include <fcntl.h>
 # include <errno.h>
 
 # include "libft.h"
@@ -38,6 +29,8 @@
 # include "spliter.h"
 # include "parser.h"
 # include "executor.h"
+
+extern int	g_sigint;
 
 typedef struct s_list
 {
@@ -55,6 +48,8 @@ typedef struct s_shell
 	int		exit_flag;
 	int		exit_status;
 }	t_shell;
+
+
 
 void	init_shell(t_shell *shell);
 void	free_shell(t_shell *shell);
@@ -111,6 +106,7 @@ void	mini_pwd(void);
 void	clear_tokens(t_token *token);
 void	clear_heredoc(t_token *token);
 void	execute(t_plit *mini);
-extern int	g_sigint;
+void	sighandler_interupt(int signo);
+void	sighandler_quit(int signo);
 
 #endif

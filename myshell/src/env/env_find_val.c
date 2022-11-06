@@ -6,12 +6,11 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:05:22 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 19:46:59 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 21:00:42 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-#include "libft.h"
 
 int	env_place(char *val, char **envc)
 {
