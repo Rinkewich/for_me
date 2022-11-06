@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:22:01 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 18:11:49 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:24:54 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	executor_builtin(t_plit	*mini)
 
 void	execute(t_plit *mini)
 {
-	if (tokens_has_builtin(*mini->tokens) && !tokens_has_pipe(*mini->tokens))
+	if (tokens_has_builtin(*mini->tokens))
 		executor_builtin(mini);
 	else
 		execute_bins(mini);

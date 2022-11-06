@@ -6,14 +6,13 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 16:03:55 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 18:11:49 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:47:23 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 #include "executor.h"
 #include "libft.h"
-
 
 char	**add_var(char **env, char *arg)
 {
@@ -56,11 +55,13 @@ char	**export_var(char *arg, char **env)
 	return (env);
 }
 
-char	**mini_export(char **argv, char **env)
+char	**mini_export(char **argv, char **env, t_plit *mini)
 {
 	int		i;
 
 	i = 0;
+	if (!argv[1])
+		mini_env(mini);
 	while (argv[++i])
 		env = export_var(argv[i], env);
 	g_sigint = 0;

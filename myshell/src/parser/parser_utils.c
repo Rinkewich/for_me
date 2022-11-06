@@ -6,13 +6,13 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 18:56:45 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/01 17:40:55 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:42:57 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-char *check_word(t_parser *data)
+char	*check_word(t_parser *data)
 {
 	return (data->words[data->index]);
 }
@@ -37,7 +37,7 @@ char	*remove_quotes(char *word)
 	return (result);
 }
 
-void add_to_argv(t_parser *data)
+void	add_to_argv(t_parser *data)
 {
 	char	*arg;
 	char	**argv;

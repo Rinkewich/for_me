@@ -6,13 +6,13 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:55:52 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 17:09:38 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:41:52 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-char *proc_herdoc(char *stopword)
+char	*proc_herdoc(char *stopword)
 {
 	char	*tmp;
 	char	*result;
@@ -34,7 +34,8 @@ char *proc_herdoc(char *stopword)
 	}
 	return (result);
 }
-char *heredoc_file(t_plit *split)
+
+char	*heredoc_file(t_plit *split)
 {
 	char	*tmp;
 	char	*result;
@@ -55,7 +56,8 @@ char *heredoc_file(t_plit *split)
 	free(tmp);
 	return (result);
 }
-char *put_heredoc(t_plit *split, t_parser *data)
+
+char	*put_heredoc(t_plit *split, t_parser *data)
 {
 	int		fd;
 	char	*fd_str;
@@ -84,7 +86,7 @@ char *put_heredoc(t_plit *split, t_parser *data)
 	return (filename);
 }
 
-void put_redirect(t_plit *split, t_parser *data)
+void	put_redirect(t_plit *split, t_parser *data)
 {
 	t_token	*reder_token;
 	char	*filename;

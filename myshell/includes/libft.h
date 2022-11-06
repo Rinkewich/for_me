@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 12:47:45 by rdeanne           #+#    #+#             */
-/*   Updated: 2022/11/06 17:18:21 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:53:10 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_strnew(int len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 char	*ft_str_addletter(char *old_word, char letter);
 char	**ft_arr_addback(char **old_array, char *word);
-size_t		ft_nbrlen(long nbr);
+size_t	ft_nbrlen(long nbr);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 #endif

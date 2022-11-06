@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:33:09 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/30 17:17:26 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:50:10 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,12 @@ typedef struct s_split_data
 # define REDIROUT_A ">>"
 # define PIPE		"|"
 
-void spliter(t_plit *split);
-char check_letter(t_split_data *data);
-int check_separator(t_split_data *data);
+void	spliter(t_plit *split);
+char	check_letter(t_split_data *data);
+int		check_separator(t_split_data *data);
 void	put_separator(t_split_data *data);
-int	check_quote(t_split_data *data);
-void put_quote(t_split_data *data);
-void put_word(t_split_data *data);
+int		check_quote(t_split_data *data);
+void	put_quote(t_split_data *data);
+void	put_word(t_split_data *data);
+
 #endif

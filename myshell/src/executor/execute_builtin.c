@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 02:58:27 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 18:11:49 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:33:45 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ void	execute_builtin(t_plit *mini, t_command *cmd)
 	if (ft_strncmp(cmd->name, "unset", ft_strlen("unset")) == 0)
 		mini->env = mini_unset(cmd->argv, mini->env);
 	if (ft_strncmp(cmd->name, "export", ft_strlen("export")) == 0)
-		mini->env = mini_export(cmd->argv, mini->env);
+		mini->env = mini_export(cmd->argv, mini->env, mini);
 }

@@ -6,14 +6,13 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 00:57:24 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 18:09:03 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:47:39 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 #include "libft.h"
 #include "executor.h"
-
 
 char	**change_pwds(char *target, char **env)
 {

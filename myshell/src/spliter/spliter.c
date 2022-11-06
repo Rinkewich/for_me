@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:38:43 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/30 17:20:39 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:39:37 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 t_split_data	*init_split_data(char *line)
 {
 	t_split_data	*data;
-	
+
 	data = malloc(sizeof(t_split_data));
 	data->index = 0;
 	data->line = line;
@@ -24,7 +24,7 @@ t_split_data	*init_split_data(char *line)
 	return (data);
 }
 
-void spliter(t_plit *split)
+void	spliter(t_plit *split)
 {
 	t_split_data	*data;
 
@@ -33,7 +33,7 @@ void spliter(t_plit *split)
 	{
 		if (check_separator(data))
 			put_separator(data);
-		else if(check_quote(data))
+		else if (check_quote(data))
 			put_quote(data);
 		else
 			put_word(data);

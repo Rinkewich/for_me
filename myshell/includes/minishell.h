@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 15:57:47 by rdeanne           #+#    #+#             */
-/*   Updated: 2022/11/06 16:59:53 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 20:28:39 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,7 @@
 # include "env.h"
 # include "spliter.h"
 # include "parser.h"
-#include "executor.h"
-
-# define PROMT "minishell: \x1B[s"
-# define MAX_PATH 1024
-
-// Tokens types
-
+# include "executor.h"
 
 typedef struct s_list
 {

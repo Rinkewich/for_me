@@ -6,13 +6,13 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:26:01 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/01 17:47:31 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:42:22 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void parser(t_plit *split)
+void	parser(t_plit *split)
 {
 	t_parser	*data;
 

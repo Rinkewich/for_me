@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 15:20:28 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 18:11:49 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:35:08 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char		**mini_cd(char **argv, char **env);
 char		**mini_unset(char **argv, char **env);
 char		**unset_var(char *var, char **env);
 char		**export_var(char *arg, char **env);
-char		**mini_export(char **argv, char **env);
+char		**mini_export(char **argv, char **env, t_plit *mini);
 void		free_env(char **env);
 
 char		**real_cd(char *target, char **env);

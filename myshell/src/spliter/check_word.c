@@ -6,14 +6,14 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 17:13:30 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/30 17:15:23 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:39:53 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 #include "spliter.h"
 
-void put_word(t_split_data *data)
+void	put_word(t_split_data *data)
 {
 	char	*word;
 

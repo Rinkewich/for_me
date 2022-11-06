@@ -6,15 +6,15 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:30:07 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/06 16:59:17 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:41:15 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-t_token *new_token(char *name, t_type type)
+t_token	*new_token(char *name, t_type type)
 {
-	t_token *token;
+	t_token	*token;
 
 	token = malloc(sizeof(t_token) * 1);
 	token->val = name;

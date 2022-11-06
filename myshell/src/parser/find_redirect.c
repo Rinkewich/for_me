@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:03:45 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/31 19:53:56 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:43:46 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	find_redirout_a(char *word)
 	return (0);
 }
 
-int find_redirect(t_parser *data)
+int	find_redirect(t_parser *data)
 {
 	char	*word;
 
@@ -54,5 +54,5 @@ int find_redirect(t_parser *data)
 		|| find_redirin(word)
 		|| find_redirout_a(word))
 		return (1);
-	return(0);
+	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 16:08:29 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/01 16:11:35 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:43:55 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int find_pipe(t_parser *data)
+int	find_pipe(t_parser *data)
 {
 	char	*word;
 

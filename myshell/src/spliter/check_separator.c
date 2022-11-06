@@ -6,14 +6,14 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 19:16:34 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/30 16:18:10 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:40:24 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 #include "spliter.h"
 
-int check_separator(t_split_data *data)
+int	check_separator(t_split_data *data)
 {
 	char	c;
 
@@ -34,7 +34,7 @@ void	words_add(char *word, t_split_data *data)
 
 void	put_separator(t_split_data *data)
 {
-	int	i;
+	int		i;
 	char	*line;
 
 	i = data->index;

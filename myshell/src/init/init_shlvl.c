@@ -6,18 +6,18 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:00:34 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/28 18:30:31 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:44:30 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "env.h"
 #include "minishell.h"
 #include "libft.h"
-//создание своего env установка shlvl
+
 char	**init_env_lvl(char **env)
 {
-	int	i;
-	int	shlvlint;
+	int		i;
+	int		shlvlint;
 	char	**tmp;
 	char	*shlvl;
 
@@ -31,5 +31,5 @@ char	**init_env_lvl(char **env)
 	shlvl = ft_itoa(shlvlint);
 	tmp = export_var(ft_strjoin("SHLVL=", shlvl), tmp);
 	free(shlvl);
-	return (tmp);	
+	return (tmp);
 }

@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 17:03:14 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/30 17:11:52 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 19:40:46 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	check_quote(t_split_data *data)
 	c = check_letter(data);
 	if (c == QUOTES_D || c == QUOTES_S)
 		return (1);
-	return(0);
+	return (0);
 }
 
-void put_quote(t_split_data *data)
+void	put_quote(t_split_data *data)
 {
 	char	*word;
 	char	quoute;
