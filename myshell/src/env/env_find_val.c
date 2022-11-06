@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:05:22 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/28 18:06:53 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 17:17:03 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int env_place(char *val, char **envc)
 {
 	int	i;
-	int vallen;
+	size_t vallen;
 
 	i = -1;
 	vallen = ft_strlen(val);

@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   mini_echo.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 12:47:27 by rdeanne           #+#    #+#             */
-/*   Updated: 2022/11/06 17:16:16 by fardath          ###   ########.fr       */
+/*   Created: 2022/04/25 16:03:51 by ejafer            #+#    #+#             */
+/*   Updated: 2022/11/06 16:35:28 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "minishell.h"
+#include "executor.h"
 #include "libft.h"
 
-size_t	ft_strlen( const char *str)
+void	mini_echo(t_command *cmd)
 {
-	size_t	i;
+	int		i;
+	char	*new_line;
 
 	i = 0;
-	while (*str != '\0')
+	new_line = "\n";
+	if (cmd->argv[1]
+		&& ft_strlen(cmd->argv[1]) == 2
+		&& ft_strncmp(cmd->argv[1], "-n", 2) == 0)
 	{
-		i++;
-		str++;
+		++i;
+		new_line = "";
 	}
-	return (i);
+	while (cmd->argv[++i])
+	{
+		printf("%s", cmd->argv[i]);
+		if (cmd->argv[i + 1])
+			printf(" ");
+	}
+	printf("%s", new_line);
+	g_sigint = 0;
 }
-

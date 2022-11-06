@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:30:07 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/01 16:04:40 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 16:59:17 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,34 @@ void	token_push_back(t_token **head, t_token *to_push)
 	while (current->next)
 		current = current->next;
 	current->next = to_push;
+}
+
+void	clear_token(t_token *token)
+{
+	int	i;
+
+	i = -1;
+	while (token->argv[++i])
+		free(token->argv[i]);
+	free(token->argv);
+}
+
+void	clear_heredoc(t_token *token)
+{
+	unlink(token->argv[1]);
+}
+
+void	clear_tokens(t_token *token)
+{
+	t_token	*tmp;
+
+	while (token)
+	{
+		if (token->type == Heredoc)
+			clear_heredoc(token);
+		clear_token(token);
+		tmp = token;
+		token = token->next;
+		free(tmp);
+	}
 }

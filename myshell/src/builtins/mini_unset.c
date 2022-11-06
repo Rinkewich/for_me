@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   unset_env.c                                        :+:      :+:    :+:   */
+/*   mini_unset.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 19:17:53 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/28 18:29:52 by fardath          ###   ########.fr       */
+/*   Created: 2022/04/25 16:03:59 by ejafer            #+#    #+#             */
+/*   Updated: 2022/11/06 16:55:59 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 #include "minishell.h"
-#include "env.h"
+
+
 char	**delete_var(char **env, int pos)
 {
 	int		i;
@@ -51,7 +51,7 @@ char	**unset_var(char *var, char **env)
 	free_env(tmp);
 	return (env);
 }
-//////////////////////что-то с этим сделать
+
 char	**mini_unset(char **argv, char **env)
 {
 	int		i;

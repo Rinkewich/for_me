@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 15:57:47 by rdeanne           #+#    #+#             */
-/*   Updated: 2022/10/31 17:28:20 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 16:59:53 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@
 # include "env.h"
 # include "spliter.h"
 # include "parser.h"
+#include "executor.h"
 
 # define PROMT "minishell: \x1B[s"
 # define MAX_PATH 1024
@@ -111,6 +112,11 @@ void	print_list(t_list *head);
 void	print_export_list(t_list *head);
 void	ptr_swap(char **p1, char **p2);
 
+void	print_errormsg(char *errormsg);
+void	mini_pwd(void);
+void	clear_tokens(t_token *token);
+void	clear_heredoc(t_token *token);
+void	execute(t_plit *mini);
 extern int	g_sigint;
 
 #endif

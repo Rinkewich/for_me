@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   export_env.c                                       :+:      :+:    :+:   */
+/*   mini_export.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 19:17:43 by fardath           #+#    #+#             */
-/*   Updated: 2022/10/25 20:32:40 by fardath          ###   ########.fr       */
+/*   Created: 2022/04/25 16:03:55 by ejafer            #+#    #+#             */
+/*   Updated: 2022/11/06 16:46:06 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "minishell.h"
+#include "executor.h"
 #include "libft.h"
+
 
 char	**add_var(char **env, char *arg)
 {
@@ -54,7 +55,7 @@ char	**export_var(char *arg, char **env)
 	env = add_var(env, arg);
 	return (env);
 }
-//////////////////////что-то с этим сделать
+
 char	**mini_export(char **argv, char **env)
 {
 	int		i;

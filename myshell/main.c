@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:26:58 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/01 17:53:04 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 16:39:26 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	master(t_plit *split)
 			what_env(split, 0, 0, 0);
 			spliter(split);
 			parser(split);
+			execute(split);
 		}
 	}
 }

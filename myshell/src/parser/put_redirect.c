@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:55:52 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/01 16:06:32 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 17:09:38 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ char *put_heredoc(t_plit *split, t_parser *data)
 	data->index++;
 	stopword = check_word(data);
 	result = proc_herdoc(stopword);
+	filename = heredoc_file(split);
 	fd = open(filename, O_TRUNC | O_WRONLY | O_CREAT, 0644);
 	if (fd < 0)
 	{

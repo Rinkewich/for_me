@@ -6,7 +6,7 @@
 /*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 17:24:01 by fardath           #+#    #+#             */
-/*   Updated: 2022/11/01 17:37:34 by fardath          ###   ########.fr       */
+/*   Updated: 2022/11/06 16:48:11 by fardath          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@ int	command_set(t_parser *data);
 void add_to_argv(t_parser *data);
 char	*remove_quotes(char *word);
 void	put_command(t_parser *data);
+void	clear_token(t_token *token);
 #endif

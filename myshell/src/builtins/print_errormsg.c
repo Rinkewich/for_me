@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   print_errormsg.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fardath <fardath@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ejafer <ejafer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 12:47:27 by rdeanne           #+#    #+#             */
-/*   Updated: 2022/11/06 17:16:16 by fardath          ###   ########.fr       */
+/*   Created: 2022/07/01 01:08:07 by ejafer            #+#    #+#             */
+/*   Updated: 2022/07/01 01:11:27 by ejafer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "minishell.h"
 
-size_t	ft_strlen( const char *str)
+void	print_errormsg(char *errormsg)
 {
-	size_t	i;
-
-	i = 0;
-	while (*str != '\0')
-	{
-		i++;
-		str++;
-	}
-	return (i);
+	if (write(STDERR_FILENO, errormsg, ft_strlen(errormsg)) < 0)
+		perror("write");
 }
-
